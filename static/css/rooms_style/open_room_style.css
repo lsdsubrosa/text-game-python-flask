@@ -1,0 +1,293 @@
+/* Reset start */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: ivory;
+    font-family: "Roboto Condensed", sans-serif;
+    color: dimgrey;
+}
+
+._container-maxwidth {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#position-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-block {
+    font-size: 20px;
+}
+
+.information-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-txt {
+    font-size: 24px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+.room-number {
+    margin-top: 10px;
+}
+
+.room-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transition-duration: 0.5s;
+}
+
+#imgsize {
+    border: 1px solid dimgrey;
+    height: auto;
+}
+
+/* Global Button Styles */
+.buttons {
+    display: flex;
+}
+
+.first-two-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.second-two-btns {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.btn {
+    min-width: 182px;
+}
+
+a.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+a.animated-button:link:after, a.animated-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+}
+
+a.animated-button:link:hover, a.animated-button:visited:hover {
+    color: brown;
+    text-shadow: none;
+}
+
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+    height: 450%;
+}
+
+a.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 5px auto 0;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/* Thar Button 1 */
+a.animated-button.thar-one {
+    margin-top: 15px;
+    color: dimgrey;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid dimgrey;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+a.animated-button.thar-one:hover {
+    color: #353535 !important;
+    background-color: transparent;
+    text-shadow: none;
+}
+
+a.animated-button.thar-one:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+}
+
+a.animated-button.thar-one:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: lightgrey;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+/* Thar Button 2 */
+a.animated-button.thar-two {
+    margin-top: 15px;
+    color: dimgrey;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid dimgrey;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+a.animated-button.thar-two:hover {
+    color: #353535 !important;
+    background-color: transparent;
+    text-shadow: ntwo;
+}
+
+a.animated-button.thar-two:hover:before {
+    top: 0%;
+    bottom: auto;
+    height: 100%;
+}
+
+a.animated-button.thar-two:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: lightgrey;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+/* Thar Button 3 */
+a.animated-button.thar-three {
+    color: dimgrey;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid dimgrey;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+a.animated-button.thar-three:hover {
+    color: #353535 !important;
+    background-color: transparent;
+}
+
+a.animated-button.thar-three:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+}
+
+a.animated-button.thar-three:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: lightgrey;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Thar Button 4 */
+a.animated-button.thar-four {
+    color: dimgrey;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 1px solid dimgrey;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+a.animated-button.thar-four:hover {
+    color: #353535 !important;
+    background-color: transparent;
+}
+
+a.animated-button.thar-four:hover:before {
+    right: 0%;
+    left: auto;
+    width: 100%;
+}
+
+a.animated-button.thar-four:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: lightgrey;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
