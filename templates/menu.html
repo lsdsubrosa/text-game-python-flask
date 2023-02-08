@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра: Номер в отеле</title>
+
+    <!--  <link rel="stylesheet" href="../css/menu_style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu_style.css') }}">
+</head>
+<body>
+<div class="_container-maxwidth">
+    <div class="main-text">
+        <p class="description-text">
+            Вы <i>Измаил</i>, новенький сотрудник в отеле.
+            Один из постояльцев отеля, который выселяется, забыл часы у себя в номере 4 на этаже 4
+            и попросил администратора их принести.
+            Администратор поручил это задание Вам. И Вы сразу же отправились в номер за часами.
+        </p>
+        <h2 id="task">Задание:</h2>
+        <ol id="tasklist">
+            <li>Вы уже находитесь на 4 этаже с номером 4(в лифте);</li>
+            <li>Ни на одной двери нет номера ¯\_(ツ)_/¯;</li>
+            <li>Номер 4 может находиться как с левой стороны от Вас или на Вас, так и с правой стороны (рис. 1);</li>
+            <li>Часы лежат прямо на столе, искать их не придётся;</li>
+            <li>В одном из номеров можно найти подсказку(единственную и ключевую, схему этажа).</li>
+            <details>
+                <summary><i>Где лежит схема этажа(Спойлер)</i></summary>
+                <p><i>Схема этажа находится от Вас по правой стороне в номере 3.</i></p>
+            </details>
+        </ol>
+
+        <div id="image">
+            <img src="{{ url_for('static', filename='img/hall.png') }}" alt="Коридор отеля, вид сверху">
+            <p id="imgtxt1"><i>Рис. 1</i></p>
+            <p id="imgtxt2"><i>Коридор отеля, вид сверху</i></p>
+        </div>
+        <h3 id="ready">Готовы ли Вы найти часы?</h3>
+        <div class="btn-block"><a href="http://127.0.0.1:8000/side_choices/"
+                                  class="btn animated-button thar-one">Готов!</a></div>
+    </div>
+</div>
+</body>
+</html>

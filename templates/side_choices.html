@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра: Номер в отеле</title>
+
+    <!--    <link rel="stylesheet" href="../css/side_choices.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/side_choices.css') }}">
+</head>
+<body>
+<div class="_container-maxwidth">
+    <div class="main-block-forms" id="position-center">
+        <form action="" method="post">
+            {{ form.csrf_token }}
+            <!--            Первый выбор-->
+            <div class="margin-bottom center" id="select-side">
+                <p class="margin-bottom">
+                    Выберете сторону:
+                </p>
+                <!--    Выбор стороны-->
+                {{ form.select_side.label }}
+                {{ form.select_side }}
+                {% for error in form.select_side.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+
+            <!--        Второй выбор-->
+            <div class="margin-bottom center" id="select-dir">
+                <p class="margin-bottom">
+                    Выберете направление:
+                </p>
+                <!--    Выбор направления-->
+                {{ form.select_dir.label }}
+                {{ form.select_dir }}
+                {% for error in form.select_dir.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+
+            <!--        Третий выбор-->
+            <div class="margin-bottom center" id="select-room">
+                <p class="margin-bottom">
+                    Выберете комнату:
+                </p>
+                <!--    Выбор комнаты-->
+                {{ form.select_room.label }}
+                {{ form.select_room }}
+                {% for error in form.select_room.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+
+
+            <!--        Кнопка принять-->
+            <div class="thar3"><a href="#"
+                                  class="btn animated-button thar-three">{{ form.submit }}</a></div>
+
+            <!--            Кнопка назад-->
+            <div class="thar4"><a href="http://127.0.0.1:8000/menu/"
+                                  class="btn animated-button thar-four">Назад</a></div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

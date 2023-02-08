@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра: Номер в отеле</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rooms_style/open_room_style.css') }}">
+    <script src="{{ url_for('static', filename='scripts/search.js') }}"></script>
+</head>
+<body style="background-color: #aeb6bf;">
+<div class="_container-maxwidth">
+
+    <div id="position-center">
+
+        <div class="main-block">
+
+            <div class="information-txt">
+                <p class="side-direction">Вы вошли в номер</p>
+                <p class="room-number">В номере никого нет</p>
+            </div>
+
+            <div class="room-image">
+                <img src="{{ url_for('static', filename='img/rooms/7.jpg') }}"
+                     alt="Left Side From You First Door"
+                     id="imgsize"
+                     style="width: 100%;">
+            </div>
+
+            <div class="buttons">
+                <div class="first-two-btns">
+                    <div class="on-line-btns">
+                        <a href="http://127.0.0.1:8000/right_side/on_you/second_door"
+                           class="btn animated-button thar-four">Назад</a>
+                    </div>
+                    <a href="http://127.0.0.1:8000/menu/"
+                       class="btn animated-button thar-one">Главная страница</a>
+                </div>
+
+                <div class="second-two-btns">
+                    <div class="on-line-btns">
+                        <a href="#"
+                           onclick="Thief()"
+                           class="btn animated-button thar-three">Обыскать</a>
+                    </div>
+                    <a href="http://127.0.0.1:8000/side_choices/"
+                       class="btn animated-button thar-two">К выбору номера</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

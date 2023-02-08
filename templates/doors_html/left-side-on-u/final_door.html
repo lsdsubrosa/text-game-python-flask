@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра: Номер в отеле</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/doors_style/open_door_style.css') }}">
+</head>
+<body style="background-color: #b3a398;">
+<div class="_container-maxwidth">
+
+    <div id="position-center">
+
+        <div class="main-block">
+
+            <div class="information-txt">
+                <p class="side-direction">Левая сторона, на Вас</p>
+                <p class="room-number">Комната номер 4</p>
+            </div>
+
+            <div class="door-image">
+                <img src="{{ url_for('static', filename='img/doors/final_door.jpg') }}"
+                     alt="Left Side From You First Door"
+                     id="imgsize"
+                     style="width: 100%;">
+            </div>
+
+            <div class="buttons">
+                <div class="on-line-btns">
+                    <a href="http://127.0.0.1:8000/side_choices/"
+                       class="btn animated-button thar-four">Назад</a>
+                    <a href="http://127.0.0.1:8000/left_side/on_you/final_room/"
+                       class="btn animated-button thar-three">Зайти</a>
+                </div>
+                <a href="http://127.0.0.1:8000/menu/"
+                   class="btn animated-button thar-one">Главная страница</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

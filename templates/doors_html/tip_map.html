@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра: Номер в отеле</title>
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/doors_style/open_door_style.css') }}">
+    <script src="{{ url_for('static', filename='scripts/tip.js') }}"></script>
+</head>
+<body style="background-color: #202123;">
+
+<script>Tip()</script>
+
+<div class="_container-maxwidth">
+    <div id="position-center">
+        <div class="main-block">
+
+            <div class="information-txt">
+                <p class="side-direction">Схема 4 этажа отеля</p>
+            </div>
+
+            <div class="door-image">
+                <img src="{{ url_for('static', filename='img/hall_tip.png') }}"
+                     alt="Left Side From You First Door"
+                     id="imgsize"
+                     style="width: 120%;">
+            </div>
+
+            <div class="buttons">
+                <div class="on-line-btns">
+                    <a href="http://127.0.0.1:8000/right_side/from_you/tip_room"
+                       class="btn animated-button thar-four">Назад</a>
+                    <a href="http://127.0.0.1:8000/side_choices/"
+                       class="btn animated-button thar-three">К выбору номера</a>
+                </div>
+                <a href="http://127.0.0.1:8000/menu/"
+                   class="btn animated-button thar-one">Главная страница</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
