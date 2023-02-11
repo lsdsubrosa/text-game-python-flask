@@ -7,19 +7,19 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 
-# Главная страница (кэп)
+# Main page (C.O.)
 @app.route('/')
 def menu():
     return render_template('menu.html')
 
 
-# При любом адресе перенаправляем пользователя на главную страницу
+# For any address, we redirect the user to the main page
 @app.route('/<string:any>/')
 def menu_any(any):
     return render_template('menu.html')
 
 
-# Выбор стороны, направления, комнаты
+# Choice of side, direction, room
 @app.route('/side_choices/', methods=['get', 'post'])
 def side_choices():
     form = SelectForms()
@@ -29,7 +29,7 @@ def side_choices():
         select2 = form.select_dir.data
         select3 = form.select_room.data
 
-        # Выбор осуществляется с помощью класса
+        # The selection is done with helper class
         if DoorChoose(select1, select2, select3).door_choose():
             url = f'{DoorChoose(select1, select2, select3).door_choose()}'
             return redirect(url_for(url))
@@ -37,8 +37,7 @@ def side_choices():
     return render_template('side_choices.html', form=form)
 
 
-# Далее идут роуты дверей и комнат
-
+# Next come the routes of doors and rooms
 # Tip map
 @app.route('/tip_map/')
 def tip_map():
